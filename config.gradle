@@ -1,0 +1,28 @@
+ext {
+
+    As = [
+            compileSdkVersion: 32,
+            applicationId    : "com.mvcandmvp",
+            minSdk           : 21,
+            targetSdk        : 32,
+            versionCode      : 1,
+            versionName      : "1.0"
+    ]
+
+    Vs = [
+            Retrofit2             : "2.5.0",
+            Retrofit2ConverterGson: "2.5.0",
+            Retrofit2Rxjava2      : "1.0.0",
+    ]
+
+    Dp = [
+            // retrofit网络请求框架
+            Retrofit2             : "com.squareup.retrofit2:retrofit:$Vs.Retrofit2",
+            // retrofit添加Json解析返回数据
+            Retrofit2ConverterGson: "com.squareup.retrofit2:converter-gson:$Vs.Retrofit2",
+            // retrofit添加Rxjava支持
+            Retrofit2Rxjava2      : "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:$Vs.Retrofit2Rxjava2",
+    ]
+
+
+}
