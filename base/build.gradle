@@ -37,4 +37,6 @@ dependencies {
     api Dp.Retrofit2
     api Dp.Retrofit2ConverterGson
     api Dp.Retrofit2Rxjava2
+    api Dp.interceptor
+    api Dp.rxjava2
 }

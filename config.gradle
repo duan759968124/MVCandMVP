@@ -13,6 +13,8 @@ ext {
             Retrofit2             : "2.5.0",
             Retrofit2ConverterGson: "2.5.0",
             Retrofit2Rxjava2      : "1.0.0",
+            rxjava2               : "2.1.1",
+            interceptor           : "3.12.1",
     ]
 
     Dp = [
@@ -22,6 +24,9 @@ ext {
             Retrofit2ConverterGson: "com.squareup.retrofit2:converter-gson:$Vs.Retrofit2",
             // retrofit添加Rxjava支持
             Retrofit2Rxjava2      : "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:$Vs.Retrofit2Rxjava2",
+            rxjava2               : "io.reactivex.rxjava2:rxandroid:$Vs.rxjava2",
+            //OKHTTP的拦截器依赖
+            interceptor           : "com.squareup.okhttp3:logging-interceptor:$Vs.interceptor",
     ]
 
 

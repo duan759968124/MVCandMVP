@@ -21,4 +21,11 @@
         android:text="个人信息"/>
 
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="关于我们"/>
+
+
 </LinearLayout>
