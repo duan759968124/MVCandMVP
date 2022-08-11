@@ -2,10 +2,11 @@ package com.mvcandmvp.mvc.model;
 
 import com.google.gson.Gson;
 import com.mvcandmvp.mvc.Interface.IUser;
-import com.mvcandmvp.mvc.base.BaseBean;
 import com.mvcandmvp.mvc.bean.InfoBean;
 import com.mvcandmvp.mvc.callback.BeanCallback;
 import com.mvcandmvp.mvc.gson.ParameterizedTypeImpl;
+import com.mvcandmvp.mvp.base.BaseBean;
+
 import java.io.IOException;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;

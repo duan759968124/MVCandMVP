@@ -4,7 +4,7 @@ package com.mvcandmvp.mvp.base;
  * 数据接收基类
  * @param <T>
  */
-public class BaseModel <T>{
+public class BaseBean<T>{
 
     private int code;
     private String msg;

@@ -12,7 +12,7 @@ public interface ApiInterface {
 
 
     @GET("")
-    Observable<BaseModel<testBean>> getData(@Query("param") String param);
+    Observable<BaseBean<testBean>> getData(@Query("param") String param);
 
 
 }

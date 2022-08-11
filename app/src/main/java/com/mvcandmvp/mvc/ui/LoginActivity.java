@@ -10,13 +10,12 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.mvcandmvp.R;
-import com.mvcandmvp.mvc.base.BaseBean;
 import com.mvcandmvp.mvc.bean.InfoBean;
 import com.mvcandmvp.mvc.bean.LoginBean;
 import com.mvcandmvp.mvc.callback.BeanCallback;
 import com.mvcandmvp.mvc.model.LoginModel;
 import com.mvcandmvp.mvc.model.UserModel;
-import com.mvcandmvp.mvp.base.BaseModel;
+import com.mvcandmvp.mvp.base.BaseBean;
 import com.mvcandmvp.mvp.model.testBean;
 import com.mvcandmvp.mvp.presenter.testPresenter;
 import com.mvcandmvp.mvp.view.testView;
@@ -24,7 +23,7 @@ import com.mvcandmvp.mvp.view.testView;
 import java.util.HashMap;
 
 //view 及 controller层
-public class LoginActivity extends AppCompatActivity implements testView<BaseModel<testBean>> {
+public class LoginActivity extends AppCompatActivity implements testView<BaseBean<testBean>> {
 
     private static final String TAG = "LoginActivity";
 
@@ -92,7 +91,7 @@ public class LoginActivity extends AppCompatActivity implements testView<BaseMod
 
     //返回成功
     @Override
-    public void onSuccess(@Nullable BaseModel<testBean> testBeanBaseModel) {
+    public void onSuccess(@Nullable BaseBean<testBean> testBeanBaseModel) {
         Log.i(TAG, "onSuccess: ");
     }
 }
