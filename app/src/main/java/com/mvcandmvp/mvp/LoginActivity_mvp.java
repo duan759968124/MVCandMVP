@@ -22,6 +22,7 @@ public class LoginActivity_mvp extends AppCompatActivity implements testView<Bas
 
     public static void start(Context context){
         Intent intent = new Intent(context, LoginActivity_mvp.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }
 

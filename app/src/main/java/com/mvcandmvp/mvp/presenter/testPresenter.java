@@ -22,7 +22,7 @@ public class testPresenter extends BasePresenter<testView<BaseBean<testBean>>> {
     public void getData(HashMap<String, Object> hashMap) {
 
 
-        apiInterface.getData("")
+        apiInterface.getData("param")
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new BaseObserver<BaseBean<testBean>>() {
