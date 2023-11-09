@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.mvcandmvp.mvc.Interface.ILogin;
 import com.mvcandmvp.mvc.bean.LoginBean;
 import com.mvcandmvp.mvc.callback.BeanCallback;
+import com.mvcandmvp.mvc.http.HttpContants;
 
 import java.io.IOException;
 
@@ -28,7 +29,7 @@ public class LoginModel implements ILogin {
                 .add("password", password)
                 .build();
         Request request = new Request.Builder().post(requestBody)
-                .url("http://192.168.1.217:8080/a/task3.json")
+                .url(HttpContants.LOGIN)
                 .build();
         Call call = okHttpClient.newCall(request);
         call.enqueue(new Callback() {

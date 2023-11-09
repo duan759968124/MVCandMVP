@@ -11,7 +11,13 @@
    <androidx.appcompat.widget.AppCompatButton
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:id="@+id/to_login"
-       android:text="去登录"/>
+       android:id="@+id/to_login_mvc"
+       android:text="MVC去登录"/>
+
+   <androidx.appcompat.widget.AppCompatButton
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/to_login_mvp"
+       android:text="MVP去登录"/>
 
 </LinearLayout>

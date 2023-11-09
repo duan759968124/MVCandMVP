@@ -1,6 +1,5 @@
 package com.mvcandmvp.mvc.ui;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
@@ -8,7 +7,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
+import com.mvcandmvp.BuildConfig;
 import com.mvcandmvp.R;
 import com.mvcandmvp.mvc.bean.InfoBean;
 import com.mvcandmvp.mvc.bean.LoginBean;
@@ -16,14 +17,9 @@ import com.mvcandmvp.mvc.callback.BeanCallback;
 import com.mvcandmvp.mvc.model.LoginModel;
 import com.mvcandmvp.mvc.model.UserModel;
 import com.mvcandmvp.mvp.base.BaseBean;
-import com.mvcandmvp.mvp.model.testBean;
-import com.mvcandmvp.mvp.presenter.testPresenter;
-import com.mvcandmvp.mvp.view.testView;
-
-import java.util.HashMap;
 
 //view 及 controller层
-public class LoginActivity extends AppCompatActivity implements testView<BaseBean<testBean>> {
+public class LoginActivity_mvc extends AppCompatActivity  {
 
     private static final String TAG = "LoginActivity";
 
@@ -32,17 +28,17 @@ public class LoginActivity extends AppCompatActivity implements testView<BaseBea
     private AppCompatButton btnAbout;
     private LoginModel mLoginModel;
     private UserModel userModel;
-    private testPresenter testPresenter;
+
 
     public static void start(Context context) {
-        Intent intent = new Intent(context, LoginActivity.class);
+        Intent intent = new Intent(context, LoginActivity_mvc.class);
         context.startActivity(intent);
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_login_mvc);
 
         mLoginModel = new LoginModel();
         btnLogin = findViewById(R.id.btn_login);
@@ -77,21 +73,13 @@ public class LoginActivity extends AppCompatActivity implements testView<BaseBea
         });
 
         btnAbout = findViewById(R.id.btn_about);
-        testPresenter = new testPresenter();
-        testPresenter.setView(this);
-        HashMap<String,Object> hashMap = new HashMap<>();
-        testPresenter.getData(hashMap);
+
+
+
+        btnAbout.setOnClickListener(v -> {
+            Toast.makeText(this, "v"+ BuildConfig.VERSION_NAME, Toast.LENGTH_SHORT).show();
+        });
     }
 
-    //返回失败
-    @Override
-    public void onError(String msg) {
-        Log.e(TAG, "onError: " + msg);
-    }
 
-    //返回成功
-    @Override
-    public void onSuccess(@Nullable BaseBean<testBean> testBeanBaseModel) {
-        Log.i(TAG, "onSuccess: ");
-    }
 }

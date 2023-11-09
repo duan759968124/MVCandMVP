@@ -17,8 +17,10 @@ import io.reactivex.schedulers.Schedulers;
  */
 public class testPresenter extends BasePresenter<testView<BaseBean<testBean>>> {
 
+    ApiInterface apiInterface = RetrofitUtil.getInstance().create(ApiInterface.class);
+
     public void getData(HashMap<String, Object> hashMap) {
-        ApiInterface apiInterface = RetrofitUtil.getInstance().create(ApiInterface.class);
+
 
         apiInterface.getData("")
                 .subscribeOn(Schedulers.io())

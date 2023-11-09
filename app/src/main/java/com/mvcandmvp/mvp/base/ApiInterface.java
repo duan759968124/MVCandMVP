@@ -11,7 +11,7 @@ import retrofit2.http.Query;
 public interface ApiInterface {
 
 
-    @GET("")
+    @GET("api/login/checktoken")
     Observable<BaseBean<testBean>> getData(@Query("param") String param);
 
 

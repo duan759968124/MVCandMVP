@@ -5,7 +5,7 @@ package com.mvcandmvp.mvp.base;
  */
 public class Api {
 
-    public static final String BASE = "";
+    public static final String BASE = "https://m.nuaa.edu.cn/a_nuaa/";
 
 
 }

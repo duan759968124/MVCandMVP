@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MVCandMVP">
         <activity
-            android:name=".mvc.ui.LoginActivity"
+            android:name=".mvc.ui.LoginActivity_mvc"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
@@ -42,6 +42,7 @@
             </intent-filter>
 
         </activity>
+        <activity android:name=".mvp.LoginActivity_mvp" />
     </application>
 
 </manifest>
